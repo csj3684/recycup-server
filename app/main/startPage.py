@@ -1,8 +1,5 @@
-from main import app
-from backend_server.dataBase import dateBase
-
-from flask import Blueprint, request
-import json
+from application import app
+from app.main.dataBase import dateBase
 
 
 @app.route('/signUp', method = ['GET', 'POST'])
@@ -101,16 +98,18 @@ def getCupInfo():
     sql = "SELECT * FROM User WHERE phoneNumber = %s"
     try:
         rows = db.cursor.execute(sql, (phoneNumber))
+
     except Exception as e:
         jsonArray = None
         print(e)
 
     else:
-        jsonArray.append({'cafeID': rows['cafeID'],
-                          'cafeName': rows['cafeName'],
-                          'cumNumber': rows['cupNumber'],
-                          'cafeLogo': rows['cafeLogo'],
-                          'dueDate': rows['dueDate']})
+        for row in rows:
+            jsonArray.append({'cafeID': row['cafeID'],
+                              'cafeName': row['cafeName'],
+                              'cumNumber': row['cupNumber'],
+                              'cafeLogo': row['cafeLogo'],
+                              'dueDate': row['dueDate']})
 
     finally:
         db.dbDisconnect()
