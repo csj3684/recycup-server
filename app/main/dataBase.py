@@ -13,7 +13,7 @@ class dateBase:
         self.setCursorDic()
 
     def dbConnect(self):
-        self.connector = mysql.connector.connect(host='dailyhappiness.cglqv9cus9nr.ap-northeast-2.rds.amazonaws.com',
+        self.connector = mysql.connector.connect(host='35.229.219.32:8888',
                                                  user='admin',
                                                  password='',
                                                  db='dailyhappiness',
