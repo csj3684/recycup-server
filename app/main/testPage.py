@@ -1,5 +1,5 @@
 from application import app
 
-@app.route('/', method = ['GET', 'POST'])
+@app.route('/')
 def mainPage():
     return "mainPage"
