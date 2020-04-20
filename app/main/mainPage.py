@@ -1,4 +1,3 @@
-from application import app
 from app.main.dataBase import dateBase
 
 
