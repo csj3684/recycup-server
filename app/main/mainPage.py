@@ -1,8 +1,17 @@
 from app.main.dataBase import dateBase
+from common import *
 
+mainPage = Blueprint('mainPage', __name__)
 
-@app.route('/signUp', method = ['GET', 'POST'])
+@mainPage.route('/')
+def showMainPage():
+    return render_template('/mainPage.html')
+
+@mainPage.route('/signUp', methods = ['GET', 'POST'])
 def createAccount():
+
+    print("회원가입")
+
     db = dateBase()
 
     phoneNumber = request.form['phoneNumber']
@@ -29,8 +38,11 @@ def createAccount():
 
     return json.dumps(jsonDict).encode('utf-8')
 
-@app.route('/signIn', method = ['GET', 'POST'])
+@mainPage.route('/signIn', methods = ['GET', 'POST'])
 def signIn():
+
+    print("로그인")
+
     db = dateBase()
 
     phoneNumber = request.form['phoneNumber']
@@ -59,8 +71,11 @@ def signIn():
 
     return json.dumps(jsonDict).encode('utf-8')
 
-@app.route('/duplicateCheck', method = ['GET', 'POST'])
+@mainPage.route('/duplicateCheck', methods = ['GET', 'POST'])
 def duplicateCheck():
+
+    print("중복 체크")
+
     db = dateBase()
 
     phoneNumber = request.form['phoneNumber']
@@ -87,8 +102,11 @@ def duplicateCheck():
     return json.dumps(jsonDict).encode('utf-8')
 
 
-@app.route('/cupInfo/get', method = ['GET', 'POST'])
+@mainPage.route('/cupInfo/get', methods = ['GET', 'POST'])
 def getCupInfo():
+
+    print("사용자 컵 정보")
+
     db = dateBase()
 
     phoneNumber = request.form['phoneNumber']

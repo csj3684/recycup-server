@@ -1,4 +1,4 @@
-import mysql.connector
+import pymysql
 
 # < connector >
 # commit()
@@ -13,7 +13,7 @@ class dateBase:
         self.setCursorDic()
 
     def dbConnect(self):
-        self.connector = mysql.connector.connect(host='35.229.219.32:8888',
+        self.connector = pymysql.connector.connect(host='localhost',
                                                  user='admin',
                                                  password='',
                                                  db='dailyhappiness',
