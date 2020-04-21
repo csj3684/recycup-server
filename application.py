@@ -1,5 +1,6 @@
-from flask import Flask
+from common import *
+from app import app
 
 if __name__=='__main__':
- app = Flask(__name__)
- app.run(host='0.0.0.0', port=8888, debug=True)
+ app.run(host='localhost', port=8888, debug=True)
+
