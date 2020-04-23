@@ -1,11 +1,15 @@
 from app.main.dataBase import dateBase
 from common import *
 
+print("mainPage.py")
+
 mainPage = Blueprint('mainPage', __name__)
+
 
 @mainPage.route('/')
 def showMainPage():
-    return render_template('/mainPage.html')
+    print("mainPage실행")
+    return 'mainPage'
 
 @mainPage.route('/signUp', methods = ['GET', 'POST'])
 def createAccount():

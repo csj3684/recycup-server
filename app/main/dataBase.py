@@ -1,5 +1,7 @@
 import pymysql
 
+print("database.py")
+
 # < connector >
 # commit()
 
@@ -13,14 +15,14 @@ class dateBase:
         self.setCursorDic()
 
     def dbConnect(self):
-        self.connector = pymysql.connector.connect(host='localhost',
-                                                 user='admin',
-                                                 password='',
-                                                 db='dailyhappiness',
-                                                 charset='utf8')
+        self.connector = pymysql.connect(host='localhost',
+                                        user='root',
+                                        password='caucse',
+                                        db='RecyCup',
+                                        charset='utf8')
 
     def setCursorDic(self):
-        self.cursor = self.conn.cursor(dictionary=True)
+        self.cursor = self.connector.cursor()
 
     def dbDisconnect(self):
         self.connector.close()
