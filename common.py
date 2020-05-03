@@ -2,5 +2,4 @@ from flask import Flask, Blueprint, request, render_template, flash, redirect, u
 import json
 import pandas as pd
 import numpy as np
-
-print("common.py")
+import pymysql

@@ -1,6 +1,4 @@
-import pymysql
-
-print("database.py")
+from common import *
 
 # < connector >
 # commit()
