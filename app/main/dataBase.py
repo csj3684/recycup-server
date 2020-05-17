@@ -17,7 +17,8 @@ class dateBase:
                                         user='root',
                                         password='caucse',
                                         db='RecyCup',
-                                        charset='utf8')
+                                        charset='utf8',
+                                        cursorclass = pymysql.cursors.DictCursor)
 
     def setCursorDic(self):
         self.cursor = self.connector.cursor()

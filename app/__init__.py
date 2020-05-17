@@ -5,6 +5,7 @@ app = Flask(__name__)
 from app.main.cafe import cafe
 from app.main.customer import customer
 from app.main.kakaoPay import kakaoPay
+from app.main.server import server
 
 
 print("__init__.py")

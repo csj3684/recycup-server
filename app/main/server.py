@@ -1,34 +1,41 @@
 from app.main.dataBase import dateBase
 from common import *
+import os
 
 server = Blueprint('server', __name__)
 
 # User Table
-    # [phoneNumber] : CHAR(13)
+    # [phoneNumber] : CHAR(11)
     # password : VARCHAR(100)
-    # name : VARCHAR(10)
-    # account : VARCHAR(45)
+    # name : VARCHAR(45)
     # point : INT(11)
 
-# Cafe Table
-    # [cafeId] : CHAR(12)
-    # password : VARCHAR(12)
-    # name : VARCHAR(10)
+# Head Table
+    # [headID] : VARCHAR(45)
+    # logoPath : VARCHAR(100)
     # type : VARCHAR(45)
-    # account : VARCHAR(45)
-    # logoPath : LONGTEXT
+
+# Cafe Table
+    # [cafeID] : CHAR(45)
+    # password : VARCHAR(100)
+    # headID : VARCHAR(45)      --> Head.headID
 
 # Sales Table
-    # [PhoneNumber] : CHAR(13)
-    # [cafeId] : CHAR(12)
+    # [PhoneNumber] : CHAR(11)  --> User.phoneNumber 하고싶은데 안 됨...
+    # [cafeID] : CHAR(45)       --> Cafe.cafeID 하고싶은데 안 됨...  슈퍼키라 그런듯?
     # [date] : DATE
     # amount : INT(11)
 
-# Back Table
-    # [phoneNumber] : CHAR(13)
-    # [cafeId] : CHAR(12)
+# Recycle Table
+    # [phoneNumber] : CHAR(13)  --> User.phoneNumber 하고싶은데 안 됨...
+    # [cafeID] : CHAR(45)       --> Cafe.cafeID 하고싶은데 안 됨...  슈퍼키라 그런듯?
     # [date] : DATE
     # amount : INT(11)
+
+# Location Table
+    # [cafeID] : VARCHAR(45)    --> Cafe.cafeID
+    # latitude : FLOAT
+    # longitude : FLOAT
 
 """
 1. 카카오페이에서 결제하여 포인트 충전
@@ -54,6 +61,15 @@ def sales():
     amount = request.form['amount']
     
     try:
+        db.cursor.execute("select point from RecyCup.User where phoneNumber = {}".format(phoneNumber))
+        point = db.cursor.fetchone()
+
+        if point < deposit * amount:
+            # 어림없음
+            pass
+            
+        db.cursor.exceute("update RecyCup.User set point = point - {} where phoneNumber = {}".format(deposit * amount, phoneNumber))
+
         db.cursor.execute("select * from RecyCup.Sales where phoneNumber = {} and cafeID = {} and date = {}".format(phoneNumber, cafeID, date))
 
         if db.cursor.fetchone() == None:
@@ -61,20 +77,19 @@ def sales():
         else:
             db.cursor.execute("update RecyCup.Sales set amount = amount + {} where phoneNumber = {} and cafeID = {} and date = {}".format(amount, phoneNumber, careID, date))
 
-        db.cursor.execute("select point from RecyCup.User where phoneNumber = {}".format(phoneNumber))
-        point = db.cursor.fetchone()
         db.connector.commit()
 
     except Exception as e:
         jsonDict = None
         print("error in 'sales'", e)
+        print("\n\n\n")
     
     else:
         jsonDict = {"phoneNumber" : phoneNumber,
                     "cafeID" : cafeID,
                     "date" : date,
                     "amount" : amount,
-                    "point" : point)}
+                    "point" : point}
     finally:
         db.dbDisconnect()
 
@@ -89,7 +104,6 @@ def cupReturn():
     db = dateBase()
 
     phoneNumber = request.form['phoneNumber']
-    deposit = request.form['deposit']
 
     try:
         db.cursor.execute("update RecyCup.User set point = point + {} where phoneNumber = {}".format(deposit, phoneNumber))
@@ -100,6 +114,7 @@ def cupReturn():
     except Exception as e:
         jsonDict = None
         print("error in 'cupReturn'", e)
+        print("\n\n\n")
 
     else:
         jsonDict = {'phoneNumber' : phoneNumber,
@@ -147,6 +162,7 @@ def update():
     except Exception as e:
         jsonDict = None
         print("error in 'update'", e)
+        print("\n\n\n")
 
     else:
         pass
@@ -156,5 +172,7 @@ def update():
 
     return json.dumps(jsonDict).encode('utf-8')
 
-    
 
+
+    
+    
