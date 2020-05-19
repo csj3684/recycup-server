@@ -1,0 +1,1441 @@
+__init__.py
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:8888/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 331-902-982
+110.70.55.135 - - [10/May/2020 04:19:01] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:19:04] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:19:32] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:20:03] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:20:49] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:20:49] "[37mPOST /customer/signUp HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:20:51] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:20:51] "[37mPOST /customer/signUp HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:22:04] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:22:04] "[37mPOST /customer/signUp HTTP/1.1[0m" 200 -
+110.70.55.135 - - [10/May/2020 04:22:24] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+ * Detected change in '/home/csj3684/capstoneProject/app/main/cafe.py', reloading
+__init__.py
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'name': 'ㅊㅅㅈ', 'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'point': 100, 'phoneNumber': '01065453152'}
+cafeInfo
+{'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png', 'headID': '빽다방'}
+{'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png', 'headID': '스타벅스'}
+{'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png', 'headID': '할리스커피'}
+customerInfo
+customerInfo
+duplicateCheck
+phoneNumber : 0101111222211
+signUp
+phoneNumber : 0101111222211
+password : 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+name : 박재윤2
+insert into RecyCup.User(phoneNumber, password, name, point) values(%s, %s, %s, %s)
+error in 'createAcount' (1406, "Data too long for column 'phoneNumber' at row 1")
+
+
+
+
+duplicateCheck
+phoneNumber : 0101111222211
+signUp
+phoneNumber : 0101111222211
+password : 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+name : 박재윤2
+insert into RecyCup.User(phoneNumber, password, name, point) values(%s, %s, %s, %s)
+error in 'createAcount' (1406, "Data too long for column 'phoneNumber' at row 1")
+
+
+
+
+duplicateCheck
+phoneNumber : 0111111111111111
+signUp
+phoneNumber : 0111111111111111
+password : 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+name : 박재윤2
+insert into RecyCup.User(phoneNumber, password, name, point) values(%s, %s, %s, %s)
+error in 'createAcount' (1406, "Data too long for column 'phoneNumber' at row 1")
+
+
+
+
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 331-902-982
+ * Detected change in '/home/csj3684/capstoneProject/app/main/dataBase.py', reloading
+__init__.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 331-902-982
+ * Detected change in '/home/csj3684/capstoneProject/app/__init__.py', reloading
+__init__.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 331-902-982
+39.7.25.149 - - [10/May/2020 08:21:55] "[37mGET /static/logo/paiks.png HTTP/1.1[0m" 200 -
+39.7.25.149 - - [10/May/2020 08:21:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+39.7.25.149 - - [10/May/2020 08:21:59] "[37mGET /static/logo/paiks.png HTTP/1.1[0m" 200 -
+39.7.25.149 - - [10/May/2020 08:21:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 08:58:59] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 08:59:52] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:09:46] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:13:18] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:13:30] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:15:47] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:15:51] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:16:42] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:16:45] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:17:46] "[37mGET /kakaoPay/success?pg_token=0da3069af7cfc6e6247e HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:17:47] "[37mPOST /customer/charge HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:17:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 09:17:59] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:18:27] "[37mGET /kakaoPay/success?pg_token=06d7ca5222a2479054ac HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:18:27] "[37mPOST /customer/charge HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:18:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 09:18:38] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:22:27] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:24:05] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:24:05] "[37mGET /static/logo/salpresso.png HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:24:05] "[37mGET /static/logo/coban.png HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:24:05] "[37mGET /static/logo/ediyaCoffee.png HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:24:05] "[37mGET /static/logo/coffeeOnly.png HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:32:04] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:32:20] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:34:30] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:35:47] "[37mGET /kakaoPay/success?pg_token=5727ad3602cd63cc3446 HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:35:47] "[37mPOST /customer/charge HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:35:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 09:36:26] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:36:47] "[37mGET /kakaoPay/success?pg_token=5f33f4311435d0795261 HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:36:47] "[37mPOST /customer/charge HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:36:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 09:36:59] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 09:39:25] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 10:48:21] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 10:48:32] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 10:50:22] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 10:51:50] "[37mGET /kakaoPay/success?pg_token=898b164f8d21f644ea5a HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 10:51:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 10:51:50] "[37mPOST /customer/charge HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 10:52:05] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 10:52:34] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 10:59:09] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:00:33] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:00:33] "[37mPOST /customer/signUp HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:00:47] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:00:49] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:00:59] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:06:07] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:07:06] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:07:12] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:09:13] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:10:33] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:10:36] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:11:40] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:11:50] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+198.108.66.161 - - [10/May/2020 11:22:19] "[33mGET / HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 11:25:39] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:25:50] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:28:11] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:29:47] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:34:38] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:34:39] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:34:39] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:35:09] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:35:09] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:37:13] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:37:14] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:37:14] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:38:02] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:38:02] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:38:02] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:38:24] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:38:59] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+__init__.py
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 1000}
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 1000}
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 1000}
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 1000}
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 1000}
+customerInfo
+sucesss
+charge
+customerInfo
+sucesss
+charge
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 1500}
+cafeInfo
+{'headID': '빽다방', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 1500}
+cafeInfo
+{'headID': '빽다방', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+customerInfo
+charge
+sucesss
+customerInfo
+sucesss
+charge
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 6000}
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 6000}
+cafeInfo
+{'headID': '빽다방', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+customerInfo
+sucesss
+charge
+customerInfo
+customerInfo
+duplicateCheck
+phoneNumber : 01088598074
+duplicateCheck
+phoneNumber : 01012345678
+signUp
+phoneNumber : 01012345678
+password : 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+name : 임시회원
+insert into RecyCup.User(phoneNumber, password, name, point) values(%s, %s, %s, %s)
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+customerInfo
+duplicateCheck
+phoneNumber : 01088598074
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+cafeInfo
+{'headID': '빽다방', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+cafeInfo
+{'headID': '빽다방', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo61.74.161.167 - - [10/May/2020 11:39:06] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:39:06] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:39:25] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:39:25] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:39:25] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:43:29] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:43:29] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:44:01] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:44:07] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:44:07] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:44:35] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:44:38] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:44:38] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:45:45] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:45:49] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:45:49] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:46:18] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:46:18] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:49:01] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+61.74.161.167 - - [10/May/2020 11:49:01] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:49:10] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+61.74.161.167 - - [10/May/2020 11:49:10] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:49:13] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:49:15] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:49:15] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:49:30] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:49:35] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:49:35] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:50:05] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+61.74.161.167 - - [10/May/2020 11:50:05] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 11:52:05] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:52:09] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:52:09] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:52:48] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 11:52:48] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 12:01:04] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 12:01:04] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 12:04:44] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 12:04:58] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 12:04:58] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 12:05:12] "[37mGET /kakaoPay/success HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 12:05:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 12:05:39] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 12:05:39] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 12:05:42] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 12:05:42] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:26:23] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:26:25] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:26:25] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:26:47] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:27:47] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:27:59] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:29:59] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:29:59] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:30:24] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:30:24] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:31:13] "[37mGET /kakaoPay/success?pg_token=4809ecaf281846805f57 HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:31:13] "[37mPOST /customer/charge HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:31:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 14:31:23] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:31:23] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:31:56] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:31:56] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:32:00] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:32:00] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:47:24] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:48:28] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:48:40] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:50:54] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:50:54] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:51:58] "[37mGET /kakaoPay/success?pg_token=4b07585923baab82b553 HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:51:58] "[37mPOST /customer/charge HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:51:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 14:52:08] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 14:52:08] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+172.105.238.87 - - [10/May/2020 19:48:15] "[33mGET / HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 23:20:29] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 23:20:29] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 23:20:33] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 23:20:33] "[35m[1mPOST /customer/customerInfo/get HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/csj3684/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/csj3684/capstoneProject/app/main/customer.py", line 126, in getCustomerInfo
+    phoneNumber = request.form['phoneNumber']
+  File "/home/csj3684/.local/lib/python3.5/site-packages/werkzeug/datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'phoneNumber'
+61.74.161.167 - - [10/May/2020 23:21:04] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:21:26] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:21:27] "[37mPOST /customer/signUp HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:21:37] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:22:01] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:24:58] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:24:58] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:26:11] "[37mGET /kakaoPay/success?pg_token=2012ae4b4a6ec88d0122 HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:26:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [10/May/2020 23:26:11] "[37mPOST /customer/charge HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:26:23] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:26:23] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:26:50] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [10/May/2020 23:26:50] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+45.13.93.90 - - [10/May/2020 23:34:45] "[33mCONNECT ip.ws.126.net:443 HTTP/1.1[0m" 404 -
+195.54.166.89 - - [10/May/2020 23:45:24] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+195.54.166.89 - - [10/May/2020 23:45:24] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+195.54.166.89 - - [10/May/2020 23:45:25] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+195.54.166.89 - - [10/May/2020 23:45:25] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+61.74.161.167 - - [11/May/2020 00:02:26] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 00:02:26] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 00:02:53] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 00:02:55] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 00:02:55] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:28:21] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:28:51] "[37mPOST /customer/duplicateCheck HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:28:51] "[37mPOST /customer/signUp HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:29:07] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:29:26] "[37mPOST /cafe/cafeInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:31:20] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:31:20] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:32:39] "[37mGET /kakaoPay/success?pg_token=0d5c55dab82c019471bc HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:32:39] "[37mPOST /customer/charge HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:32:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+61.74.161.167 - - [11/May/2020 02:32:50] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:32:50] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:33:10] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:33:11] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+cafeInfo
+{'headID': '빽다방', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+customerInfo
+sucesss
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '임시회원', 'phoneNumber': '01012345678', 'point': 0}
+customerInfo
+customerInfo
+duplicateCheck
+phoneNumber : 01088598074
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 6300}
+cafeInfo
+{'headID': '빽다방', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'p', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+sucesss
+charge
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+duplicateCheck
+phoneNumber : 01088598074
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '박재윤', 'phoneNumber': '01088598074', 'point': 6800}
+cafeInfo
+{'headID': '빽다방', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'pp', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+customerInfo
+customerInfo
+sucesss
+charge
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+duplicateCheck
+phoneNumber : 01088598074
+duplicateCheck
+phoneNumber : 01088598073
+signUp
+phoneNumber : 01088598073
+password : 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+name : 실험
+insert into RecyCup.User(phoneNumber, password, name, point) values(%s, %s, %s, %s)
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '실험', 'phoneNumber': '01088598073', 'point': 0}
+cafeInfo
+{'headID': '빽다방', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'pp', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+customerInfo
+customerInfo
+sucesss
+charge
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '실험', 'phoneNumber': '01088598073', 'point': 200}
+customerInfo
+customerInfo
+duplicateCheck
+phoneNumber : 01088598074
+duplicateCheck
+phoneNumber : 01066669999
+signUp
+phoneNumber : 01066669999
+password : 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+name : 캡스톤
+insert into RecyCup.User(phoneNumber, password, name, point) values(%s, %s, %s, %s)
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '캡스톤', 'phoneNumber': '01066669999', 'point': 0}
+cafeInfo
+{'headID': '빽다방', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/paiks.png'}
+{'headID': '샐프레소', 'type': 'pp', 'logoPath': 'http://35.229.219.32:8888/static/logo/salpresso.png'}
+{'headID': '스타벅스', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/starBucks.png'}
+{'headID': '이디야커피', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/ediyaCoffee.png'}
+{'headID': '커피에반하다', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/coban.png'}
+{'headID': '커피온니', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/coffeeOnly.png'}
+{'headID': '할리스커피', 'type': 'pet', 'logoPath': 'http://35.229.219.32:8888/static/logo/hollysCoffee.png'}
+customerInfo
+customerInfo
+sucesss
+charge
+customerInfo
+customerInfo
+customerInfo
+customerInfo
+signIn
+select * from RecyCup.User where phoneNumber = %s and password = %s
+{'password': '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'name': '캡스톤', 'phoneNumber': '01066669999', 'point': 500}61.74.161.167 - - [11/May/2020 02:33:15] "[37mPOST /customer/signIn HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:33:19] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+61.74.161.167 - - [11/May/2020 02:33:19] "[37mPOST /customer/customerInfo/get HTTP/1.1[0m" 200 -
+209.17.97.114 - - [11/May/2020 02:59:42] "[33mGET / HTTP/1.0[0m" 404 -
+209.17.96.194 - - [11/May/2020 03:00:59] "[33mGET / HTTP/1.1[0m" 404 -
+178.62.127.114 - - [11/May/2020 09:15:06] "[33mGET / HTTP/1.0[0m" 404 -
+185.153.198.239 - - [11/May/2020 10:14:40] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.153.198.239 - - [11/May/2020 10:14:40] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.153.198.239 - - [11/May/2020 10:21:43] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.153.198.239 - - [11/May/2020 10:21:43] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.153.198.239 - - [11/May/2020 11:11:08] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.153.198.239 - - [11/May/2020 11:11:08] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.153.198.239 - - [11/May/2020 11:15:36] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.153.198.239 - - [11/May/2020 11:15:36] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+209.17.97.42 - - [11/May/2020 18:34:39] "[33mGET / HTTP/1.1[0m" 404 -
+209.17.96.242 - - [11/May/2020 20:24:10] "[33mGET / HTTP/1.0[0m" 404 -
+45.13.93.82 - - [12/May/2020 01:00:22] "[33mCONNECT ip.ws.126.net:443 HTTP/1.1[0m" 404 -
+
+customerInfo
+customerInfo
+__init__.py
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:8888/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 331-902-982
+45.83.64.107 - - [16/May/2020 13:02:58] "[33mGET / HTTP/1.1[0m" 404 -

@@ -1,4 +1,4 @@
-from app.main.dataBase import dateBase
+from app.main.dataBase import dataBase
 from common import *
 
 customer = Blueprint('customer', __name__)
@@ -8,7 +8,7 @@ def duplicateCheck():
 
     print("duplicateCheck")
 
-    db = dateBase()
+    db = dataBase()
 
     phoneNumber = request.form['phoneNumber']
 
@@ -42,7 +42,7 @@ def createAccount():
 
     print("signUp")
 
-    db = dateBase()
+    db = dataBase()
 
     phoneNumber = request.form['phoneNumber']
     password = request.form['password']
@@ -78,7 +78,7 @@ def signIn():
 
     print("signIn")
 
-    db = dateBase()
+    db = dataBase()
 
     phoneNumber = request.form['phoneNumber']
     password = request.form['password']
@@ -121,9 +121,10 @@ def getCustomerInfo():
 
     print("customerInfo")
 
-    db = dateBase()
+    db = dataBase()
 
     phoneNumber = request.form['phoneNumber']
+
 
     try:
         db.cursor.execute("select sum(amount) as totalSales from RecyCup.Sales where phoneNumber = {}".format(phoneNumber))
@@ -158,12 +159,42 @@ def getCustomerInfo():
 
     return json.dumps(jsonDict).encode('utf-8')
 
+@customer.route('/customerInfo/edit', methods = ['GET', 'POST'])
+def editCustomerInfo():
+    print("editCafeInfo")
+
+    db = dataBase()
+    phoneNumber = request.form['phoneNumber']
+    password = request.form['password']
+    name = request.form['name']
+
+
+    try:
+        sql = "update RecyCup.User set password = %s, name = %s where phoneNumber = %s"
+        db.cursor.execute(sql, (password, name, phoneNumber))
+
+        isSuccess = True
+        
+        db.connector.commit()
+    except Exception as e:
+        print("Error in 'editCustomerInfo'", e); print("\n\n")
+        jsonDict = None
+
+    else:
+        jsonDict = {'phoneNumber' : phoneNumber,
+                    'password' : password,
+                    'name' : name}
+
+    finally:
+        db.dbDisconnect()
+
+    return json.dumps(jsonDict).encode('utf-8')
 
 @customer.route('/charge', methods = ['GET', 'POST'])
 def charge():
     print("charge")
 
-    db = dateBase()
+    db = dataBase()
 
     phoneNumber = request.form['phoneNumber']
     amount = request.form['amount']

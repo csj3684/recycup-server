@@ -1,4 +1,4 @@
-from app.main.dataBase import dateBase
+from app.main.dataBase import dataBase
 from common import *
 import os
 
@@ -53,7 +53,7 @@ server = Blueprint('server', __name__)
 
 @server.route('/sales', methods = ['GET', 'POST'])
 def sales():
-    db = dateBase()
+    db = dataBase()
 
     phoneNumber = request.form['phoneNumber']
     cafeID = request.form['cafeID']
@@ -101,7 +101,7 @@ def cupReturn():
 
     print("cupReturn")
 
-    db = dateBase()
+    db = dataBase()
 
     phoneNumber = request.form['phoneNumber']
 
@@ -131,7 +131,7 @@ def update():
 
     print("update")
     
-    db = dateBase()
+    db = dataBase()
 
     try:
         db.cursor.execute(" \
@@ -144,7 +144,7 @@ def update():
             (select phoneNumber, cafeID, sum(amount) as returnAmount \
             from RecyCup.Back \
             group by phoneNumber, cafeID)totalReturn \
-            on totalSales.phoneNumber = totalReturn.phoneNumber and totalSales.cafeID = totalReturn.cafeID\
+            on totalSales.phoneNumber = totalReturn.phoneNumber and totalSales.cafeID = totalReturn.cafeID \
             ) \
         group by cafeID \
         ")

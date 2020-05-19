@@ -7,7 +7,7 @@ from common import *
 # execute() : SQL 을 DB로, cursor.execute("%s, ..., %s", (parameter1, parameter2))
 # fetchall(), fetchone(), fetchmany() : Data 를 server로, execute() 보내고 DB로부터 온 Data 읽기
 
-class dateBase:
+class dataBase:
     def __init__(self):
         self.dbConnect()
         self.setCursorDic()
