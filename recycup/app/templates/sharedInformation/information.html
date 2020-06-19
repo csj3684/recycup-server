@@ -1,0 +1,307 @@
+<html>
+    <head>
+    </head>
+    <body onload="build();">
+        날짜 <input type="text" id = "date_from" placeholder="YYYYMMDD" onclick="clickDataBox(this.id)" style="text-align:center; width:100px;"> ~ <input type="text" id="date_to" placeholder="YYYYMMDD" onclick="clickDataBox(this.id)" style="text-align:center; width:100px;"> <br>
+        
+        <table id="calendar">
+            <tr>
+                <td><font size=1%; color="#B3B6B3"><label onclick="beforem()" id="before" ></label></font></td>
+                <td colspan="5" align="center" id="yearmonth"></td>
+                <td><font size=1%; color="#B3B6B3"><label onclick="nextm()" id="next"></label></font></td>
+            </tr>
+            <tr>
+                <td align="center"> <font color="#FF9090">일</font></td>
+                <td align="center"> 월 </td>
+                <td align="center"> 화 </td>
+                <td align="center"> 수 </td>
+                <td align="center"> 목 </td>
+                <td align="center"> 금 </td>
+                <td align="center"><font color=#7ED5E4>토</font></td>
+            </tr>
+        </table> <br>
+
+
+        번호 <input type="text" id="phoneNumber" placeholder="(-) 없이 입력해주세요." onclick="hideCalendar()" style="text-align:center; width:140px;"> <br><br>
+
+        갯수 <input type="text" id="amount_from" onclick="hideCalendar()" style="text-align:center; width:50px;"> ~ <input type="text" id="amount_to" onclick="hideCalendar()" style="text-align:center; width:50px;"> <br><br>
+
+        상태 <select id = "status" onclick="hideCalendar()">
+                <option selected="selected"></option>
+                <option>sales</option>
+                <option>recycle</option>
+            </select> <br><br>
+       
+        <button id = "search" onclick="search()">검색</button> <br><br>
+
+        <!-- <button id = "logout" onclick="logout()">로그아웃(미구현)</button> <br><br>/ -->
+
+        <table id = "table" border = "1" onclick="hideCalendar()">
+            <tr>
+                <td style="text-align:center; width:150px;">날짜</td>
+                <td style="text-align:center; width:150px;">번호</td>
+                <td style="text-align:center; width:150px;">갯수</td>
+                <td style="text-align:center; width:150px;">상태</td>
+                <td style="text-align:center; width:150px;">금액</td>
+            </tr>
+            <tbody id = "informationTable"></tbody>
+        </table>
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            var headName = '{{headName}}';
+            var lst = JSON.parse('{{lst|safe}}');
+            var clickedDataBox;
+            $("#calendar").hide(); 
+
+            function hideCalendar() {
+                $("#calendar").hide(); 
+            }
+
+            function clickDataBox(id){
+                clickedDataBox = id
+                $("#calendar").show(); 
+            }
+
+            function logout() {
+
+            }
+
+            function search() {
+                $("#calendar").hide(); 
+
+                var date_from = document.getElementById('date_from').value;
+                var date_to = document.getElementById('date_to').value;
+                var phoneNumber = document.getElementById('phoneNumber').value;
+                var status = document.getElementById('status').value;
+                var amount_from = document.getElementById('amount_from').value;
+                var amount_to = document.getElementById('amount_to').value;
+                
+                if(typeCheck(date_from, date_to, phoneNumber, amount_from, amount_to) == false)
+                    return;
+
+                // table 초기화
+                $("#table tr:not(:first)").remove();
+
+                // lst[i] : dictionary
+                // 조건에 맞는 것들만 출력
+                for(var i in lst) {
+
+                    if(filter(date_from, date_to, phoneNumber, amount_from, amount_to, status, lst[i]['date'], lst[i]['phoneNumber'], lst[i]['amount'], lst[i]['status']) == false)
+                        continue;
+                    addRow(lst[i]['date'], lst[i]['phoneNumber'], lst[i]['amount'], lst[i]['status'], lst[i]['amount'] * 500);
+                }
+            }
+
+            function typeCheck(date_from, date_to, phoneNumber, amount_from, amount_to) {
+                if(date_from != "" && parseYYYYMMDD(date_from) == 'invalid date') {
+                    alert("date format error : YYYYMMDD");
+                    document.getElementById('date_from').value = "";
+                    return false;
+                }
+                if(date_to != "" && parseYYYYMMDD(date_to) == 'invalid date') {
+                    alert("date format error : YYYYMMDD");
+                    document.getElementById('date_to').value = "";
+                    return false;
+                }
+
+                if(phoneNumber != "") {
+                    if(isNaN(Number(phoneNumber)) == true) {
+                        alert("phoneNumber format error : 010--------");
+                        document.getElementById('phoneNumber').value = "";
+                        return false;
+                    }
+                    if(strncmp(phoneNumber, "010", 3) != 0) {
+                        alert("phoneNumber format error : Should start with '010'");
+                        document.getElementById('phoneNumber').value = "";
+                        return false;
+                    }
+                    if(phoneNumber.length != 11) {
+                        alert("phoneNumber format error : The length should be '11'");
+                        document.getElementById('phoneNumber').value = "";
+                        return false;
+                    }
+                }
+                
+        
+                if(amount_from != "" && (isNaN(Number(amount_from)) == true || parseInt(amount_from) < 0)) {
+                    alert("amount format error : natural number");
+                    document.getElementById('amount_from').value = "";
+                    return false;
+                }
+                if(amount_to != "" && (isNaN(Number(amount_to)) == true || parseInt(amount_to) < 0)) {
+                    alert("amount format error : natural number");
+                    document.getElementById('amount_from').value = "";
+                    return false;
+                }
+                return true;
+            }
+
+            function filter(date_from, date_to, phoneNumber, amount_from, amount_to, status, targetDate, targetPhoneNumber, targetAmount, targetStatus) {
+                if(date_from != "" && date_to != "" && !(parseYYYYMMDD(date_from) <= parseTargetDate(targetDate) && parseTargetDate(targetDate) <= parseYYYYMMDD(date_to))){
+                    return false;
+                }
+                else if(date_from != "" && date_to == "" && parseYYYYMMDD(date_from) > parseTargetDate(targetDate)){
+                    return false;
+                }
+                else if(date_from == "" && date_to != "" && parseTargetDate(targetDate) > parseYYYYMMDD(date_to)){
+                    return false;
+                }
+                
+                if(phoneNumber != "" && targetPhoneNumber != phoneNumber)
+                    return false;
+                
+                if(status != "" && status != targetStatus)
+                    return false;
+
+                if(amount_from != "" && amount_to != "" && !(parseInt(amount_from) <= parseInt(targetAmount) && parseInt(targetAmount) < parseInt(amount_to)))
+                    return false;
+                else if(amount_from != "" && amount_to == "" && parseInt(amount_from) > parseInt(targetAmount))
+                    return false;
+                else if(amount_from == "" && amount_to != "" && parseInt(targetAmount) > parseInt(amount_to))
+                    return false;
+                
+                return true;
+            }
+
+            function addRow(date, phoneNumber, number, status, amount) {
+                var row = document.all["informationTable"].insertRow();
+                var dateRow = row.insertCell();
+                var phoneNumberRow = row.insertCell();
+                var numberRow = row.insertCell();
+                var statusRow = row.insertCell();
+                var amountRow = row.insertCell();
+
+                dateRow.innerHTML = "<input type = 'text' value = " + date + ">"
+                phoneNumberRow.innerHTML = "<input type = 'text' value = " + phoneNumber + ">"
+                numberRow.innerHTML = "<input type = 'text' value = " + number + ">"
+                statusRow.innerHTML = "<input type = 'text' value = " + status + ">"
+                amountRow.innerHTML = "<input type = 'text' value = " + amount + ">"
+            }
+
+            function parseYYYYMMDD(str) {
+                var y = str.substr(0,4),
+                    m = str.substr(4,2) - 1,
+                    d = str.substr(6,2);
+                var D = new Date(y,m,d);
+                return (D.getFullYear() == y && D.getMonth() == m && D.getDate() == d) ? D : 'invalid date';
+            }
+
+            function parseTargetDate(str) {
+                var y = str.substr(0,4),
+                    m = str.substr(5,2) - 1,
+                    d = str.substr(8,2);
+                var D = new Date(y,m,d);
+                return (D.getFullYear() == y && D.getMonth() == m && D.getDate() == d) ? D : 'invalid date';
+            }
+
+            function strncmp(str1, str2, n) {
+                str1 = str1.substring(0, n);
+                str2 = str2.substring(0, n);
+                return (( str1 == str2 ) ? 0 : (( str1 > str2 ) ? 1 : -1 ));
+            }   
+
+
+            var today = new Date(); // 오늘 날짜
+            var date = new Date();
+        
+            function beforem() //이전 달을 today에 값을 저장
+            { 
+                today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+                build(); //만들기
+            }
+            
+            function nextm()  //다음 달을 today에 저장
+            {
+                today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+                build();
+            }
+            
+            function build()
+            {
+                var nMonth = new Date(today.getFullYear(), today.getMonth(), 1); //현재달의 첫째 날
+                var lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0); //현재 달의 마지막 날
+                var tbcal = document.getElementById("calendar"); // 테이블 달력을 만들 테이블
+                var yearmonth = document.getElementById("yearmonth"); //  년도와 월 출력할곳
+                var year = today.getFullYear()
+                var month = today.getMonth() + 1
+                if(month < 10) {
+                    yearmonth.innerHTML = "<span id = 'year'>" + year + "</span>년" + " " + "<span id = 'month'>" + "0" + month + "</span>월" ;    
+                }
+                else {
+                    yearmonth.innerHTML = "<span id = 'year'>" + year + "</span>년" + " " + "<span id = 'month'>" + month + "</span>월" ;
+                }
+                
+                
+                if(today.getMonth()+1==12) //  눌렀을 때 월이 넘어가는 곳
+                {
+                    before.innerHTML=(today.getMonth())+"월";
+                    next.innerHTML="1월";
+                }
+                else if(today.getMonth()+1==1) //  1월 일 때
+                {
+                before.innerHTML="12월";
+                next.innerHTML=(today.getMonth()+2)+"월";
+                }
+                else //   12월 일 때
+                {
+                    before.innerHTML=(today.getMonth())+"월";
+                    next.innerHTML=(today.getMonth()+2)+"월";
+                }
+                
+            
+                // 남은 테이블 줄 삭제
+                while (tbcal.rows.length > 2) 
+                {
+                    tbcal.deleteRow(tbcal.rows.length - 1);
+                }
+                var row = null;
+                row = tbcal.insertRow();
+                var cnt = 0;
+        
+                // 1일 시작칸 찾기
+                for (i = 0; i < nMonth.getDay(); i++) 
+                {
+                    cell = row.insertCell();
+                    cnt = cnt + 1;
+                }
+        
+                // 달력 출력
+                for (i = 1; i <= lastDate.getDate(); i++) // 1일부터 마지막 일까지
+                { 
+                    var day;
+                    if(i<10) {
+                        day = "0" + i;
+                    }
+                    else {
+                        day = "" + i
+                    }
+                    cell = row.insertCell();
+                    cell.innerHTML = "<span id = 'day" + day + "' onclick='selectDay((this.id).substr(3, 5))'>" + i + "</span>";
+                    cnt = cnt + 1;
+                    if (cnt % 7 == 1) {//일요일 계산
+                        cell.innerHTML = "<font color=#FF9090>" + "<span id = 'day" + day + "' onclick='selectDay((this.id).substr(3, 5))'>" + i + "</span>"; //일요일에 색
+                    }
+                    if (cnt % 7 == 0) { // 1주일이 7일 이므로 토요일 계산
+                        cell.innerHTML = "<font color=#7ED5E4>" + "<span id = 'day" + day + "' onclick='selectDay((this.id).substr(3, 5))'>" + i + "</span>"; //토요일에 색
+                        row = calendar.insertRow();// 줄 추가
+                    }
+                    if(today.getFullYear()==date.getFullYear()&&today.getMonth()==date.getMonth()&&i==date.getDate()) 
+                    {
+                        cell.bgColor = "#BCF1B1"; //오늘날짜배경색
+                    }
+                }
+            }
+
+            function selectDay(day) {
+                var year = $("#year").text();
+                var month = $("#month").text();
+                var day = day
+
+                document.getElementById(clickedDataBox).value = year + month + day
+                $("#calendar").hide(); 
+            }
+        </script>
+    </body>
+</html>
+
